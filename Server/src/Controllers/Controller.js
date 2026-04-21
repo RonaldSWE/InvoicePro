@@ -1,6 +1,6 @@
 import express from "express";
 import { v7 as uuidv7 } from "uuid";
-import Invoice from "../Models/Invoice.ts";
+import Invoice from "../Models/Invoice.js";
 
 export async function getInvoices(req, res) {
   try {
@@ -31,7 +31,7 @@ export async function getSingleInvoice(req, res) {
 
     res.status(200).json(singleInvoice);
   } catch (error) {
-    console.log("Error while fetching your todo", error);
+    console.log("Error while fetching your invoice", error);
     res.status(500).json({ msg: "Internal server error" });
   }
 }

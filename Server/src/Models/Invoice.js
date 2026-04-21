@@ -21,6 +21,6 @@ const InvoiceSchema = new mongoose.Schema({
   isDraft: { type: Boolean, default: false },
 });
 
-const Invoice = mongoose.model<IInvoice>("Invoice", InvoiceSchema);
+const Invoice = mongoose.model("Invoice", InvoiceSchema);
 
 export default Invoice;
