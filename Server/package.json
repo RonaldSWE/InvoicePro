@@ -5,12 +5,10 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "src/Index.ts",
+  "main": "src/Index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/Index.ts",
-    "build": "tsc",
-    "start": "node dist/Index.js"
+    "dev": "nodemon src/Index.ts"
   },
   "dependencies": {
     "@types/cors": "^2.8.19",

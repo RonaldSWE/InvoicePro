@@ -5,7 +5,7 @@ import {
   createInvoice,
   updateInvoice,
   deleteInvoice,
-} from "../Controllers/Controller.ts";
+} from "../Controllers/Controller.js";
 
 const router = express.Router();
 

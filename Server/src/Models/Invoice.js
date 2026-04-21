@@ -1,21 +1,6 @@
-import mongoose, { Document } from "mongoose";
+import mongoose from "mongoose";
 
-interface IInvoice extends Document {
-  invoiceID: string;
-  date: Date;
-  customerName: string;
-  customerEmail?: string; // For validation
-  items: {
-    description: string;
-    quantity: number;
-    price: number;
-  }[];
-  totalAmount: number;
-  status: "draft" | "pending" | "paid"; // Add this
-  isDraft: boolean; // Or just use status === "draft"
-}
-
-const InvoiceSchema = new mongoose.Schema<IInvoice>({
+const InvoiceSchema = new mongoose.Schema({
   invoiceID: { type: String, required: true, unique: true },
   date: { type: Date, required: true },
   customerName: { type: String, required: true },

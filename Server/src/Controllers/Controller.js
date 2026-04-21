@@ -1,8 +1,8 @@
-import { type Request, type Response } from "express";
+import express from "express";
 import { v7 as uuidv7 } from "uuid";
 import Invoice from "../Models/Invoice.ts";
 
-export async function getInvoices(req: Request, res: Response) {
+export async function getInvoices(req, res) {
   try {
     const invoice = await Invoice.find();
     res.status(200).json(invoice);
@@ -12,7 +12,7 @@ export async function getInvoices(req: Request, res: Response) {
   }
 }
 
-export async function getSingleInvoice(req: Request, res: Response) {
+export async function getSingleInvoice(req, res) {
   try {
     const { id } = req.params;
 
@@ -36,7 +36,7 @@ export async function getSingleInvoice(req: Request, res: Response) {
   }
 }
 
-export async function createInvoice(req: Request, res: Response) {
+export async function createInvoice(req, res) {
   try {
     const invoiceData = req.body;
 
@@ -54,7 +54,7 @@ export async function createInvoice(req: Request, res: Response) {
   }
 }
 
-export async function updateInvoice(req: Request, res: Response) {
+export async function updateInvoice(req, res) {
   try {
     const { id } = req.params;
 
@@ -79,7 +79,7 @@ export async function updateInvoice(req: Request, res: Response) {
   }
 }
 
-export async function deleteInvoice(req: Request, res: Response) {
+export async function deleteInvoice(req, res) {
   try {
     const { id } = req.params;
 

@@ -16,10 +16,10 @@ InvoicePro is a simple and efficient invoice management web application built wi
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Node.js, Express, TypeScript  
+- **Backend**: Node.js, Express, JavaScript  
 - **Database**: MongoDB with Mongoose  
 - **UUID**: uuid (v7)  
-- **Frontend**: (React – if applicable)
+- **Frontend**: (React)
 
 ---
 

@@ -1,8 +1,8 @@
-import express, { type Request, type Response } from "express";
+import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import router from "./Routes/Routes.ts";
-import { connectDB } from "./Config/DB.ts";
+import router from "./Routes/Routes.js";
+import { connectDB } from "./Config/DB.js";
 
 dotenv.config();
 
