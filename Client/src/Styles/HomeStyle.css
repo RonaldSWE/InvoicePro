@@ -1,0 +1,281 @@
+/* Container */
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F8F8FB;
+  transition: background-color 0.3s ease;
+}
+
+.container.dark {
+  background-color: #141625;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 103px;
+  padding: 48px 48px 48px 48px;
+  max-width: 900px;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.header-left h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0C0E16;
+  margin: 0 0 8px 0;
+}
+
+.dark .header-left h1 {
+  color: #FFFFFF;
+}
+
+.invoice-count {
+  font-size: 13px;
+  color: #888EB0;
+  margin: 0;
+}
+
+.dark .invoice-count {
+  color: #DFE3FA;
+}
+
+/* Add Button */
+.addBtn {
+  background: #7C5DFA;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.addBtn:hover {
+  background: #9277FF;
+}
+
+/* Invoice List */
+.invoices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Invoice Item Card */
+.invoice-item {
+  background: white;
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid transparent;
+}
+
+.invoice-item:hover {
+  border-color: #7C5DFA;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dark .invoice-item {
+  background: #1E2139;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.invoice-id-status {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 160px;
+}
+
+.invoice-id {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0C0E16;
+}
+
+.dark .invoice-id {
+  color: #FFFFFF;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+  min-width: 85px;
+  text-align: center;
+}
+
+.status-badge.paid {
+  background: rgba(51, 214, 159, 0.1);
+  color: #33D69F;
+}
+
+.status-badge.pending {
+  background: rgba(255, 143, 0, 0.1);
+  color: #FF8F00;
+}
+
+.status-badge.draft {
+  background: rgba(55, 59, 83, 0.1);
+  color: #373B53;
+}
+
+.dark .status-badge.draft {
+  background: rgba(223, 227, 250, 0.1);
+  color: #DFE3FA;
+}
+
+/* Invoice Details */
+.invoice-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.invoice-date {
+  font-size: 13px;
+  color: #7E88C3;
+  margin: 0;
+}
+
+.dark .invoice-date {
+  color: #DFE3FA;
+}
+
+.invoice-customer {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0C0E16;
+  margin: 0;
+}
+
+.dark .invoice-customer {
+  color: #FFFFFF;
+}
+
+.invoice-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0C0E16;
+  min-width: 100px;
+  text-align: right;
+}
+
+.dark .invoice-amount {
+  color: #FFFFFF;
+}
+
+/* Empty State */
+.empty-state {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.empty-state-content {
+  text-align: center;
+  max-width: 300px;
+}
+
+.empty-state-content h2 {
+  font-size: 20px;
+  color: #0C0E16;
+  margin: 24px 0 12px 0;
+}
+
+.dark .empty-state-content h2 {
+  color: #FFFFFF;
+}
+
+.empty-state-content p {
+  font-size: 13px;
+  color: #888EB0;
+  line-height: 1.5;
+}
+
+/* Loading State */
+.loading-state {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7E88C3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 24px 24px 24px 24px;
+  }
+
+  .invoice-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .invoice-id-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .invoice-details {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .invoice-amount {
+    text-align: left;
+    width: auto;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 16px;
+  }
+
+  .invoice-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .invoice-id-status {
+    gap: 12px;
+  }
+}

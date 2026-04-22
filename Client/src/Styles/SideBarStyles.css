@@ -1,0 +1,135 @@
+/* Sidebar container - matches Figma design */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 103px;
+  height: 100vh;
+  background: #1e2139;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.dark .sidebar {
+  background: #141625;
+}
+
+/* Top section with logo */
+.sidebar-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Bottom section with avatar and theme toggle */
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 32px;
+  width: 100%;
+}
+
+/* Avatar styling */
+.avatar-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.avatar-wrapper:hover {
+  transform: scale(1.05);
+  border-color: #7c5dfa;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Theme toggle button */
+.toggleTheme{
+  font-size: 1.875rem;
+  color: #765bba;
+  cursor: pointer;
+}
+
+/* Mobile/Tablet responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: 95%;
+    height: auto;
+    flex-direction: row;
+    border-radius: 0;
+    padding: 0 24px;
+    background: #1e2139;
+  }
+
+  .dark .sidebar {
+    background: #141625;
+  }
+
+  .sidebar-top {
+    width: auto;
+    padding-top: 0;
+  }
+
+  .logo {
+    width: auto;
+    height: 100%;
+  }
+
+  .sidebar-bottom {
+    flex-direction: row;
+    padding-bottom: 0;
+    width: auto;
+    gap: 16px;
+  }
+
+  .avatar-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-toggle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 0 16px;
+  }
+
+  .logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .avatar-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+}
