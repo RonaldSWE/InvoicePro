@@ -8,7 +8,7 @@ const InvoiceSchema = new mongoose.Schema({
   senderPostalCode: { type: Number, required: true },
   senderCountry: { type: String, required: true },
   customerName: { type: String, required: true },
-  customerEmail: { type: String },
+  customerEmail: { type: String, required: true },
   receiverStreetAddress: { type: String, required: true },
   receiverCity: { type: String, required: true },
   receiverPostalCode: { type: Number, required: true },
