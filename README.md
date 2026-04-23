@@ -24,7 +24,7 @@ InvoicePro is a simple and efficient invoice management web application built wi
 ---
 
 ## Current Status
-- ⚠ In development
+- ✅ Finished and Deployed and you can find it at [InvoicePro](https://invoicepro-invoice-manager.netlify.app/)
 
 ---
 
