@@ -7,7 +7,7 @@
 }
 
 .container.dark {
-  background-color: #141625;
+  background-color: #120e24;
 }
 
 /* Main Content */
@@ -65,6 +65,15 @@
 
 .addBtn:hover {
   background: #9277FF;
+}
+
+.addBtn svg{
+  background-color: white;
+  color: #9277FF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin-right: 20px;
 }
 
 /* Invoice List */
@@ -219,6 +228,10 @@
   line-height: 1.5;
 }
 
+.dark .empty-state-content p {
+  color: #DFE3FA;
+}
+
 /* Loading State */
 .loading-state {
   flex: 1;
@@ -226,6 +239,10 @@
   justify-content: center;
   align-items: center;
   color: #7E88C3;
+}
+
+.dark .loading-state {
+  color: #DFE3FA;
 }
 
 /* Responsive */

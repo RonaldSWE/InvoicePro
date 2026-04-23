@@ -66,6 +66,10 @@
   cursor: pointer;
 }
 
+.dark .toggleTheme {
+  color: #9277FF;
+}
+
 /* Mobile/Tablet responsive */
 @media (max-width: 768px) {
   .sidebar {
