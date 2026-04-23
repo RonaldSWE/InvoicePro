@@ -13,7 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isDark, toggleTheme }) => {
       <div className="sidebar-top">
         <div className="logo-wrapper">
           <img
-            src="src/assets/Logo.png"
+            src="Logo.png"
             alt="Invoice App Logo"
             className="logo"
           />
@@ -28,7 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isDark, toggleTheme }) => {
         )}
         <div className="avatar-wrapper">
           <img
-            src="src/assets/Profile Pic.png"
+            src="Profile Pic.png"
             alt="User Avatar"
             className="avatar"
           />
